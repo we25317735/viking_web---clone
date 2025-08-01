@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>光頡科技-複製版</title>
+
+    <!-- bootstrap 的 CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- font-awesome 的 CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- swiper 的 CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- 自定義 css -->
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <!-- header 部分 -->
+    <header>
+      <!-- 最上面那行 -->
+      <div id="header-top" style="background-color: #e4e4e4">
+        <div class="container d-flex justify-content-between mx-auto">
+          <div class="d-flex py-2">
+            <div class="d-flex">
+              <i class="fa-regular fa-envelope-open pt-1"></i>
+              <a href="#">
+                <p
+                  class="hidden-phone text-secondary ps-2 pe-1 mb-0 d-none d-md-block"
+                  style="font-size: 15px"
+                >
+                  打開詢問清單
+                </p>
+              </a>
+              <p
+                class="px-1 py-auto fw-bolder text-white bg-primary rounded-1 mb-0 ms-2 ms-md-0"
+                style="font-size: 12px; line-height: 22px"
+              >
+                0
+              </p>
+            </div>
+          </div>
+
+          <div class="dropdown my-auto">
+            <span>Language: </span>
+            <button
+              class="dropdown-toggle"
+              type="button"
+              id="languageDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              中文 (繁體)
+            </button>
+
+            <!-- 下拉式選單 -->
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+              <li><a class="dropdown-item" href="#">English</a></li>
+              <li><a class="dropdown-item" href="#">Español</a></li>
+              <li><a class="dropdown-item" href="#">Português</a></li>
+              <li><a class="dropdown-item" href="#">Deutsch</a></li>
+              <li><a class="dropdown-item" href="#">Français</a></li>
+              <li><a class="dropdown-item" href="#">Nederlands</a></li>
+              <li><a class="dropdown-item" href="#">日本語</a></li>
+              <li><a class="dropdown-item" href="#">한국어</a></li>
+              <li><a class="dropdown-item" href="#">中文 (繁體)</a></li>
+              <li><a class="dropdown-item" href="#">中文 (简体)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- logo  -->
+      <div id="header-logo" class="my-3">
+        <div class="container px-2">
+          <div class="d-md-flex justify-content-between py-3 mx-md-4">
+            <!-- 左邊 logo -->
+            <div class="logo-box" style="max-width: 250px">
+              <!-- logo -->
+              <a href="#"
+                ><img
+                  class="w-100"
+                  style="object-fit: cover"
+                  src="https://cdn.ready-market.com.tw/cdb12976/Templates/pic/logo.png?v=f4a02c69"
+                  alt="光頡科技股份有限公司 - 光頡科技是高精度車用電組, 薄膜電阻, 厚膜電阻, 積層電容及電感的專業製造商"
+                />
+              </a>
+            </div>
+
+            <!-- 右邊 搜尋框 -->
+            <div class="right-box d-md-flex">
+              <div
+                class="right-text d-flex flex-column justify-content-end d-none d-sm-block me-3"
+              >
+                <div class="ms-auto text-end" style="font-size: 0.8rem">
+                  撥打服務專線
+                </div>
+                <p class="fw-bolder fs-6" style="color: #036bb5">
+                  +886-3-597-2931
+                </p>
+              </div>
+
+              <div class="right-box mx-3 mx-sm-0">
+                <div class="input-group flex-nowrap pt-1">
+                  <div class="input-group-text">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="請輸入關鍵字"
+                    aria-label="Text input with checkbox"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- nav 部分 -->
+    <nav
+      class="navbar navbar-expand-md py-0"
+      style="background: #181818; z-index: 99"
+    >
+      <div class="container-fluid">
+        <!-- 手機板按鈕 -->
+        <button
+          class="navbar-toggler mx-auto my-2 bg-primary"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <!-- 列表處 -->
+          <ul class="navbar-nav mx-auto flex-wrap">
+            <!-- 首頁 -->
+            <li class="nav-item">
+              <div class="nav-title">
+                <a href="#">首頁</a>
+              </div>
+              <ul class="nav-item-more ps-0">
+                <li><a href="#">首頁 1</a></li>
+                <li><a href="#">首頁 2</a></li>
+              </ul>
+            </li>
+
+            <!-- 關於光頡 -->
+            <li class="nav-item">
+              <div class="nav-title">
+                <a href="#">關於光頡</a>
+              </div>
+              <ul class="ps-0">
+                <li><a href="#">關於光頡 1</a></li>
+                <li><a href="#">關於光頡 2</a></li>
+                <li><a href="#">關於光頡 3</a></li>
+                <li><a href="#">關於光頡 4</a></li>
+              </ul>
+            </li>
+
+            <!-- 產品 -->
+            <li class="nav-item">
+              <div class="nav-title">
+                <a href="#">產品</a>
+              </div>
+              <ul class="ps-0">
+                <li><a href="#">產品 1</a></li>
+                <li><a href="#">產品 2</a></li>
+              </ul>
+            </li>
+
+            <!-- 最新消息 -->
+            <li class="nav-item">
+              <div class="nav-title">
+                <a href="#">最新消息</a>
+              </div>
+              <ul class="ps-0">
+                <li><a href="#">項目一</a></li>
+                <li><a href="#">項目二</a></li>
+              </ul>
+            </li>
+
+            <!-- 應用 -->
+            <li class="nav-item">
+              <div class="nav-title">
+                <a href="#">應用</a>
+              </div>
+              <ul class="ps-0">
+                <li><a href="#">項目一</a></li>
+                <li><a href="#">項目二</a></li>
+              </ul>
+            </li>
+
+            <!-- 技術支援 -->
+            <li class="nav-item">
+              <div class="nav-title">
+                <a href="#">技術支援</a>
+              </div>
+              <ul class="ps-0">
+                <li><a href="#">項目一</a></li>
+                <li><a href="#">項目二</a></li>
+              </ul>
+            </li>
+
+            <!-- 投資人專區 -->
+            <li class="nav-item">
+              <div class="nav-title">
+                <a href="#">投資人專區</a>
+              </div>
+              <ul class="ps-0">
+                <li><a href="#">項目一</a></li>
+                <li><a href="#">項目二</a></li>
+              </ul>
+            </li>
+
+            <!-- 聯絡我們 -->
+            <li class="nav-item">
+              <div class="nav-title">
+                <a href="#">聯絡我們</a>
+              </div>
+              <ul class="ps-0">
+                <li><a href="#">項目一</a></li>
+                <li><a href="#">項目二</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- hero section 先跳過 -->
+    <section class="hero-section">
+      <!-- 進度條 -->
+      <div class="progress" style="height: 5px">
+        <div
+          class="progress-bar"
+          role="progressbar"
+          style="width: 0%"
+          id="carouselProgress"
+        ></div>
+      </div>
+
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+        data-bs-interval="8000"
+      >
+        <!-- 底部按鈕 -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://cdn.ready-market.com.tw/cdb12976/Templates/pic/slider-img_01.jpg?v=05074909"
+              class="d-block w-100"
+              alt="Slide 1"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://cdn.ready-market.com.tw/cdb12976/Templates/pic/slider-img_02.jpg?v=05074909"
+              class="d-block w-100"
+              alt="Slide 2"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://cdn.ready-market.com.tw/cdb12976/Templates/pic/slider-img_03.jpg?v=05074909"
+              class="d-block w-100"
+              alt="Slide 3"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://cdn.ready-market.com.tw/cdb12976/Templates/pic/slider-img_04.jpg?v=05074909"
+              class="d-block w-100"
+              alt="Slide 4"
+            />
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 歡迎蒞臨光頡科技股份有限公司 -->
+    <section id="introduce">
+      <div class="container">
+        <h4 class="text-info fw-normal pb-3 ps-2 ps-sm-0">
+          歡迎蒞臨光頡科技股份有限公司
+        </h4>
+        <div class="row">
+          <div class="col-lg-7 col-12">
+            <!--左邊列表  -->
+            <div class="left-item mx-2 mx-sm-0 mx-sm-auto pb-5 pb-lg-0">
+              <div class="d-sm-flex p-3 pb-4" style="background-color: #eee">
+                <img
+                  class="mx-4 mx-sm-0"
+                  src="https://cdn.ready-market.com.tw/cdb12976/Templates/pic/m/Promotion-Welcome-to-Viking.jpg?v=9121fc2f"
+                />
+
+                <div class="p-2 ps-4">
+                  <h6 class="fw-normal fst-italic">
+                    歡迎蒞臨光頡科技股份有限公司
+                  </h6>
+                  <p>
+                    光頡科技是高階被動元件專業製造商,薄膜精密電阻,厚膜,偵測電阻,各式功能電阻,電容,高頻電感及功率電感提供快速及具競爭性價格服務
+                  </p>
+                  <br />
+                  <a href="#">閱讀更多</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-12">
+            <!-- 右方列表 -->
+            <div
+              class="right-item mx-auto border border-5 mt-5 mt-sm-0 mx-5 mx-sm-0"
+            >
+              <div class="p-4">
+                <h4>產品規格料號搜尋(英文)</h4>
+                <hr />
+                <p>
+                  光頡科技擁有近百萬筆產品資料供應給國內外廠商使用，為了加速找到您採購合適的產品，現在您可透過規格、料號、替代品料號的搜尋方式來快速找到適合的產品。註:本搜尋介面主要以英文提供給您查詢。
+                </p>
+
+                <a class="btn-mini" href="/en/search.html?type=product"
+                  ><i class="fa fa-search"></i> 立即前往</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="my-5 mx-auto w-50" />
+
+    <section id="application">
+      <div class="container mx-auto">
+        <div class="row">
+          <h4 class="text-info fw-normal pb-3 ms-3">應用</h4>
+          <!-- 汽車應用 -->
+          <div class="col-12 col-sm-4 col-md-4 mb-5">
+            <div class="card mx-3 mx-sm-auto" style="overflow: hidden">
+              <img
+                src="https://cdn.ready-market.com.tw/cdb12976/Templates/pic/m/Promotion-Application-01.jpg?v=34c833ab"
+                alt=""
+              />
+              <div class="card-box">
+                <div class="card-content">
+                  <h5 class="card-title mt-3">汽車應用</h5>
+                  <p class="card-text pt-md-3">
+                    IATF‐16949認證生產現場。符合AEC-Q200。具有VDA6.3的高可靠性，並已獲得設備和員工的認證，可製造汽車產品
+                  </p>
+                  <a href="#" class="btn btn-primary">閱讀更多</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 醫療應用 -->
+          <div class="col-12 col-sm-4 col-md-4 mb-5">
+            <div class="card mx-3 mx-sm-auto" style="overflow: hidden">
+              <img
+                src="https://cdn.ready-market.com.tw/cdb12976/Templates/pic/m/Promotion-Application-02.jpg?v=0d4e718b"
+                alt=""
+              />
+              <div class="card-box">
+                <div class="card-content">
+                  <h5 class="card-title mt-3">醫療應用</h5>
+                  <p class="card-text pt-md-3">
+                    Viking擁有通過ISO13485認證的先進技術，可製造醫療應用的高等級電阻器
+                  </p>
+                  <a href="#" class="btn btn-primary">閱讀更多</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 通訊應用 -->
+          <div class="col-12 col-sm-4 col-md-4 mb-5">
+            <div class="card mx-3 mx-sm-auto" style="overflow: hidden">
+              <img
+                src="https://cdn.ready-market.com.tw/cdb12976/Templates/pic/m/Promotion-Application-03.jpg?v=ae208f29"
+                alt=""
+              />
+              <div class="card-box">
+                <div class="card-content">
+                  <h5 class="card-title mt-3">通訊應用</h5>
+                  <p class="card-text pt-md-3">
+                    關鍵的通信應用是智能手機，SMPS電信電源，用戶線卡，無線基站
+                  </p>
+                  <a href="#" class="btn btn-primary">閱讀更多</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br class="mt-5" />
+
+    <!-- 熱門產品 -->
+    <section id="product" style="overflow: hidden">
+      <div class="container">
+        <div class="row">
+          <!-- 介紹 -->
+          <div class="col-12 col-md-3">
+            <div>
+              <h4 class="text-info fw-normal pb-3 ps-3">熱門產品</h4>
+              <p class="mx-3 mx-sm-0 mb-5 mb-sm-0">
+                光頡科技是薄膜製程及功能型厚膜產品的全球領先製造商，以研發製造薄膜電阻,
+                功能型厚膜, 排阻, 柱狀電阻, 車用電阻, 薄膜電感, 高頻電感,
+                功率電感, 磁珠, 陶瓷電容, 固態電容, 等產品為主。
+              </p>
+            </div>
+
+            <!-- 換頁按鈕 -->
+            <div class="change-btn" style="position: relative">
+              <div
+                class="swiper-button-prev swiper-button-next1"
+                style="font-size: 90px"
+              ></div>
+              <div class="swiper-button-next swiper-button-next1"></div>
+            </div>
+          </div>
+
+          <!-- 輪播 -->
+          <div class="col-md-9">
+            <div class="swiper swiper-popular1">
+              <div class="swiper-wrapper">
+                <!-- 圖片 item -->
+                <div class="swiper-slide">
+                  <div class="slide-item">
+                    <!-- 屏幕 -->
+                    <div
+                      class="screen d-flex justify-content-center align-items-center"
+                    >
+                      <i class="fa-solid fa-plus fs-1"></i>
+                    </div>
+                    <img
+                      src="https://cdn.ready-market.com.tw/cdb12976/Templates/pic/m/Promotion-hot_product_3.jpg?v=040f2dbe"
+                    />
+                    <div class="product-name">
+                      <span></span>
+                      <p class="d-block p-3 pb-4">電容</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 電感 -->
+                <div class="swiper-slide">
+                  <div class="slide-item">
+                    <!-- 屏幕 -->
+                    <div
+                      class="screen d-flex justify-content-center align-items-center"
+                    >
+                      <i class="fa-solid fa-plus fs-1"></i>
+                    </div>
+                    <img
+                      src="https://cdn.ready-market.com.tw/cdb12976/Templates/pic/m/Promotion-hot_product_2.jpg?v=d3abe479"
+                    />
+                    <div class="product-name">
+                      <span></span>
+                      <p class="d-block p-3 pb-4">電感</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 電容 -->
+                <div class="swiper-slide">
+                  <div class="slide-item">
+                    <!-- 屏幕 -->
+                    <div
+                      class="screen d-flex justify-content-center align-items-center"
+                    >
+                      <i class="fa-solid fa-plus fs-1"></i>
+                    </div>
+                    <img
+                      src="https://cdn.ready-market.com.tw/cdb12976/Templates/pic/m/Promotion-hot_product_3.jpg?v=040f2dbe"
+                    />
+                    <div class="product-name">
+                      <span></span>
+                      <p class="d-block p-3 pb-4">電容</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 電容 -->
+                <!-- <div class="swiper-slide">
+                  <div class="slide-item">
+                    <div
+                      class="screen d-flex justify-content-center align-items-center"
+                    >
+                      <i class="fa-solid fa-plus fs-1"></i>
+                    </div>
+                    <img
+                      src="https://cdn.ready-market.com.tw/cdb12976/Templates/pic/m/Promotion-hot_product_3.jpg?v=040f2dbe"
+                    />
+                    <div class="product-name">
+                      <span></span>
+                      <p class="d-block p-3 pb-4">電容</p>
+                    </div>
+                  </div>
+                </div> -->
+
+                <!-- 電阻 -->
+                <div class="swiper-slide">
+                  <div class="slide-item">
+                    <!-- 屏幕 -->
+                    <div
+                      class="screen d-flex justify-content-center align-items-center"
+                    >
+                      <i class="fa-solid fa-plus fs-1"></i>
+                    </div>
+                    <img
+                      src="https://cdn.ready-market.com.tw/cdb12976/Templates/pic/m/Promotion-hot_product_1.jpg?v=2797481d"
+                    />
+                    <div class="product-name">
+                      <span></span>
+                      <p class="d-block p-3 pb-4">電阻</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 光頡優勢 -->
+    <section id="merit" class="mt-5">
+      <div class="container">
+        <div class="d-flex justify-content-between">
+          <h4 class="text-info fw-normal pb-3 ps-3">光頡優勢</h4>
+
+          <!-- 光頡優勢 -->
+          <div class="change-btn" style="position: relative">
+            <div class="swiper-button-next swiper-button-next2"></div>
+            <div class="swiper-button-prev swiper-button-prev2"></div>
+          </div>
+        </div>
+
+        <div class="row mx-3">
+          <div class="col-12">
+            <!-- 輪播開始 -->
+            <div class="swiper swiper-popular2 w-100">
+              <div class="swiper-wrapper">
+                <!-- 輪播項目 -->
+                <div class="swiper-slide">
+                  <div class="merit-item w-100" style="background-color: #eee">
+                    <div class="d-sm-flex">
+                      <div class="d-flex ps-4">
+                        <img
+                          class="swiper-img py-3"
+                          src="https://cdn.ready-market.com.tw/cdb12976/Templates/pic/m/Viking-Logo-113x75.jpg?v=8a35f77c"
+                          alt=""
+                        />
+                        <p
+                          class="ps-3 mb-0 pt-4 fst-italic fw-normal d-block d-sm-none"
+                        >
+                          美國光頡
+                        </p>
+                      </div>
+
+                      <div class="ps-4">
+                        <p
+                          class="mb-0 pt-3 fst-italic fw-normal d-none d-sm-block"
+                        >
+                          美國光頡
+                        </p>
+                        <p class="mb-0 pb-1">
+                          美國光頡提供在地最及時快速的服務,
+                          與台灣相同的系統連線同步,具有競爭力的條件, 快速交貨。
+                        </p>
+                        <a href="#">閱讀更多</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 輪播項目 -->
+                <div class="swiper-slide">
+                  <div class="merit-item w-100" style="background-color: #eee">
+                    <div class="d-flex">
+                      <img
+                        class="ps-4 py-3"
+                        src="https://cdn.ready-market.com.tw/cdb12976/Templates/pic/m/Promotion-Resistor-113x75.jpg?v=261f5f16"
+                        alt=""
+                      />
+                      <div class="ps-4">
+                        <p class="mb-0 pt-3 fst-italic fw-normal">電阻</p>
+                        <p class="mb-0 pb-1">
+                          薄膜精密電阻,打線式, 柱狀, 低阻,合金,
+                          厚膜,抗硫化,抗突波,耐高壓,排阻及高功率電阻。
+                        </p>
+                        <a href="#">閱讀更多</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 輪播項目 -->
+                <div class="swiper-slide">
+                  <div class="merit-item w-100" style="background-color: #eee">
+                    <div class="d-flex">
+                      <img
+                        class="ps-4 py-3"
+                        src="https://cdn.ready-market.com.tw/cdb12976/Templates/pic/m/Promotion-Inductor-113x75.jpg?v=54bd2bf7"
+                        alt=""
+                      />
+                      <div class="ps-4">
+                        <p class="mb-0 pt-3 fst-italic fw-normal">電感</p>
+                        <p class="mb-0 pb-1">
+                          陶瓷高頻電感包含薄膜技術, 積層堆疊及自動繞線,
+                          一般磁性材料提供中低頻,EMI filter 等應用。
+                        </p>
+                        <a href="#">閱讀更多</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 與我聯絡部分 -->
+    <section id="about" class="pb-5" style="overflow: hidden">
+      <div class="container">
+        <div class="row">
+          <!-- 聯絡資訊 部分 -->
+          <div class="col-12 col-md-2">
+            <div class="contact mx-auto">
+              <h5>聯絡資訊</h5>
+              <ul class="ps-0">
+                <li class="d-flex">
+                  <i class="fa fa-phone pt-1 pe-2" style="color: #5fb7df"></i>
+                  <span class="text-break"> +886-3-597-2931 </span>
+                </li>
+
+                <li class="d-flex">
+                  <i
+                    class="fa fa-envelope pt-1 pe-2"
+                    style="color: #5fb7df"
+                  ></i>
+                  <span class="text-break"> sales@viking.com.tw </span>
+                </li>
+
+                <li class="d-flex">
+                  <i
+                    class="fa fa-map-marker pt-1 pe-2"
+                    style="color: #5fb7df"
+                  ></i>
+                  <span class="text-break">
+                    新竹縣湖口鄉新竹工業區光復北路70號
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 資訊 部分 -->
+          <div class="col-12 col-md-2">
+            <div class="information mx-auto">
+              <h5>資訊</h5>
+              <ul class="ps-0">
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">關於光頡</a></li>
+                <li><a href="#">產品</a></li>
+                <li><a href="#">最新消息</a></li>
+                <li><a href="#">應用</a></li>
+                <li><a href="#">技術支援</a></li>
+                <li><a href="#">投資人專區</a></li>
+                <li><a href="#">聯絡我們</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 最新消息 -->
+          <div class="col-12 col-md-8">
+            <div class="news-box" style="position: relative">
+              <div class="latest-news position-sm-absolute">
+                <div
+                  class="d-flex justify-content-between align-items-center me-5"
+                >
+                  <h5>最新消息</h5>
+                  <div class="position-relative pe-2">
+                    <div class="position-absolute" style="width: 90px">
+                      <div class="swiper-button-next swiper-button-next3"></div>
+                      <div class="swiper-button-prev swiper-button-prev3"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper swiper-popular3">
+                  <div class="swiper-wrapper">
+                    <!-- 輪播項目 -->
+                    <div class="swiper-slide">
+                      <div class="d-flex">
+                        <!-- 一個訊息 -->
+                        <div class="news d-flex">
+                          <div class="calendar">
+                            <!-- 消息框(width 無效, 只能用 paddind 的方式) -->
+                            <div class="calendar-box rounded-1">
+                              <div class="moon rounded-1">
+                                <h3 class="text-center mb-0 fw-bolder">03</h3>
+                                <p class="text-center mb-0 pb-2">SEP</p>
+                              </div>
+
+                              <div class="d-flex pt-2 pb-1">
+                                <i class="fa fa-calendar pt-1 pe-1"></i>
+                                <span>2024</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 文字部分 -->
+                          <div class="calendar-text ps-4">
+                            <h4 class="title fw-bolder">
+                              Automotive Thick Film Flat Array Chip Resistor
+                              –CNF..A series
+                            </h4>
+                            <p class="content fw-light">
+                              Resistor Array is composed of several independent
+                              chip resistors. It limits the current and
+                              stabilizes the voltage. It can be used as pull-up
+                              and pull-down resistors for parallel ports,...
+                            </p>
+                            <a href="#">閱讀更多</a>
+                          </div>
+                        </div>
+
+                        <!-- 一個訊息 -->
+                        <div class="news d-flex ms-5">
+                          <div class="calendar">
+                            <!-- 消息框(width 無效, 只能用 paddind 的方式) -->
+                            <div class="calendar-box rounded-1">
+                              <div class="moon rounded-1">
+                                <h3 class="text-center mb-0 fw-bolder">08</h3>
+                                <p class="text-center mb-0 pb-2">SEP</p>
+                              </div>
+
+                              <div class="d-flex pt-2 pb-1">
+                                <i class="fa fa-calendar pt-1 pe-1"></i>
+                                <span>2024</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 文字部分 -->
+                          <div class="calendar-text ps-4">
+                            <h4 class="title fw-bolder">
+                              Automotive Thick Film Flat Array Chip Resistor
+                              –CNF..A series
+                            </h4>
+                            <p class="content fw-light">
+                              Resistor Array is composed of several independent
+                              chip resistors. It limits the current and
+                              stabilizes the voltage. It can be used as pull-up
+                              and pull-down resistors for parallel ports,...
+                            </p>
+                            <a href="#">閱讀更多</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 輪播項目 -->
+                    <div class="swiper-slide">
+                      <div class="d-flex">
+                        <!-- 一個訊息 -->
+                        <div class="news d-flex">
+                          <div class="calendar">
+                            <!-- 消息框(width 無效, 只能用 paddind 的方式) -->
+                            <div class="calendar-box rounded-1">
+                              <div class="moon rounded-1">
+                                <h3 class="text-center mb-0 fw-bolder">03</h3>
+                                <p class="text-center mb-0 pb-2">SEP</p>
+                              </div>
+
+                              <div class="d-flex pt-2 pb-1">
+                                <i class="fa fa-calendar pt-1 pe-1"></i>
+                                <span>2024</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 文字部分 -->
+                          <div class="calendar-text ps-4">
+                            <h4 class="title fw-bolder">
+                              Automotive Thick Film Flat Array Chip Resistor
+                              –CNF..A series
+                            </h4>
+                            <p class="content fw-light">
+                              Resistor Array is composed of several independent
+                              chip resistors. It limits the current and
+                              stabilizes the voltage. It can be used as pull-up
+                              and pull-down resistors for parallel ports,...
+                            </p>
+                            <a href="#">閱讀更多</a>
+                          </div>
+                        </div>
+
+                        <!-- 一個訊息 -->
+                        <div class="news d-flex ms-5">
+                          <div class="calendar">
+                            <!-- 消息框(width 無效, 只能用 paddind 的方式) -->
+                            <div class="calendar-box rounded-1">
+                              <div class="moon rounded-1">
+                                <h3 class="text-center mb-0 fw-bolder">03</h3>
+                                <p class="text-center mb-0 pb-2">SEP</p>
+                              </div>
+
+                              <div class="d-flex pt-2 pb-1">
+                                <i class="fa fa-calendar pt-1 pe-1"></i>
+                                <span>2024</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 文字部分 -->
+                          <div class="calendar-text ps-4">
+                            <h4 class="title fw-bolder">
+                              Automotive Thick Film Flat Array Chip Resistor
+                              –CNF..A series
+                            </h4>
+                            <p class="content fw-light">
+                              Resistor Array is composed of several independent
+                              chip resistors. It limits the current and
+                              stabilizes the voltage. It can be used as pull-up
+                              and pull-down resistors for parallel ports,...
+                            </p>
+                            <a href="#">閱讀更多</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 輪播項目 -->
+                    <div class="swiper-slide">
+                      <div class="d-flex">
+                        <!-- 一個訊息 -->
+                        <div class="news d-flex">
+                          <div class="calendar">
+                            <!-- 消息框(width 無效, 只能用 paddind 的方式) -->
+                            <div class="calendar-box rounded-1">
+                              <div class="moon rounded-1">
+                                <h3 class="text-center mb-0 fw-bolder">03</h3>
+                                <p class="text-center mb-0 pb-2">SEP</p>
+                              </div>
+
+                              <div class="d-flex pt-2 pb-1">
+                                <i class="fa fa-calendar pt-1 pe-1"></i>
+                                <span>2024</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 文字部分 -->
+                          <div class="calendar-text ps-4">
+                            <h4 class="title fw-bolder">
+                              Automotive Thick Film Flat Array Chip Resistor
+                              –CNF..A series
+                            </h4>
+                            <p class="content fw-light">
+                              Resistor Array is composed of several independent
+                              chip resistors. It limits the current and
+                              stabilizes the voltage. It can be used as pull-up
+                              and pull-down resistors for parallel ports,...
+                            </p>
+                            <a href="#">閱讀更多</a>
+                          </div>
+                        </div>
+
+                        <!-- 一個訊息 -->
+                        <div class="news d-flex ms-5">
+                          <div class="calendar">
+                            <!-- 消息框(width 無效, 只能用 paddind 的方式) -->
+                            <div class="calendar-box rounded-1">
+                              <div class="moon rounded-1">
+                                <h3 class="text-center mb-0 fw-bolder">03</h3>
+                                <p class="text-center mb-0 pb-2">SEP</p>
+                              </div>
+
+                              <div class="d-flex pt-2 pb-1">
+                                <i class="fa fa-calendar pt-1 pe-1"></i>
+                                <span>2024</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 文字部分 -->
+                          <div class="calendar-text ps-4">
+                            <h4 class="title fw-bolder">
+                              Automotive Thick Film Flat Array Chip Resistor
+                              –CNF..A series
+                            </h4>
+                            <p class="content fw-light">
+                              Resistor Array is composed of several independent
+                              chip resistors. It limits the current and
+                              stabilizes the voltage. It can be used as pull-up
+                              and pull-down resistors for parallel ports,...
+                            </p>
+                            <a href="#">閱讀更多</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 最後 footer -->
+    <footer style="background-color: #036bb5">
+      <div class="container">
+        <div class="row pt-4">
+          <div class="col-12 col-sm-6 mx-4 mx-sm-0">
+            <p class="mb-0 mt-1" style="color: #9accff">
+              Copyright © 2024
+
+              <span class="text-light">光頡科技股份有限公司</span> All Rights
+              Reserved.
+            </p>
+            <p class="mb-0 mt-2 mt-sm-0" style="color: #54a1d7">
+              Consulted & Designed by Ready-Market.
+            </p>
+          </div>
+
+          <!-- 社群 icon  -->
+          <div class="community col-12 col-sm-6">
+            <ul
+              class="d-flex justify-content-end"
+              style="transform: scale(0.7)"
+            >
+              <li>
+                <!-- 推特 -->
+                <div class="community-box">
+                  <a href="#">
+                    <div class="community-item mx-auto">
+                      <img
+                        src="https://static.vecteezy.com/system/resources/previews/021/495/987/non_2x/twitter-social-media-logo-icon-free-png.png"
+                        alt=""
+                      />
+                    </div>
+                  </a>
+
+                  <div class="baffle"></div>
+                </div>
+              </li>
+              <li>
+                <!-- fb -->
+                <div class="community-box">
+                  <a href="#">
+                    <div class="community-item mx-auto">
+                      <img
+                        src="https://hpwines.com.tw/wp-content/uploads/2018/12/FB-Icon.png"
+                        alt=""
+                      />
+                    </div>
+                  </a>
+
+                  <div class="baffle"></div>
+                </div>
+              </li>
+              <li>
+                <!-- in -->
+                <div class="community-box">
+                  <a href="#">
+                    <div class="community-item mx-auto">
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                        alt=""
+                      />
+                    </div>
+                  </a>
+
+                  <div class="baffle"></div>
+                </div>
+              </li>
+              <li>
+                <!-- 推特 -->
+                <div class="community-box">
+                  <a href="#">
+                    <div class="community-item mx-auto">
+                      <img
+                        src="https://static.vecteezy.com/system/resources/previews/021/495/987/non_2x/twitter-social-media-logo-icon-free-png.png"
+                        alt=""
+                      />
+                    </div>
+                  </a>
+
+                  <div class="baffle"></div>
+                </div>
+              </li>
+              <li>
+                <!-- 推特 -->
+                <div class="community-box">
+                  <a href="#">
+                    <div class="community-item mx-auto">
+                      <img
+                        src="https://static.vecteezy.com/system/resources/previews/021/495/987/non_2x/twitter-social-media-logo-icon-free-png.png"
+                        alt=""
+                      />
+                    </div>
+                  </a>
+
+                  <div class="baffle"></div>
+                </div>
+              </li>
+              <li>
+                <!-- 推特 -->
+                <div class="community-box">
+                  <a href="#">
+                    <div class="community-item mx-auto">
+                      <img
+                        src="https://static.vecteezy.com/system/resources/previews/021/495/987/non_2x/twitter-social-media-logo-icon-free-png.png"
+                        alt=""
+                      />
+                    </div>
+                  </a>
+
+                  <div class="baffle"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- bootstrap js 的 CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- 倫波 -->
+    <script>
+      // Hero 進度條和輪播圖片控制
+      const carousel = document.getElementById('carouselExampleIndicators')
+      const progressBar = document.getElementById('carouselProgress')
+      let intervalId
+      let intervalDuration = carousel.getAttribute('data-bs-interval') || 8000
+
+      const startProgressBar = (duration) => {
+        // 清除動畫
+        progressBar.style.transition = 'none'
+        progressBar.style.width = '0%'
+
+        // 確保重新渲染
+        setTimeout(() => {
+          progressBar.style.transition = `width ${duration}ms linear` // 設定新的動畫
+          progressBar.style.width = '100%'
+        }, 10) // 短暫延遲以重置動畫
+      }
+
+      // 初始化 Carousel 切換事件監聽器
+      carousel.addEventListener('slide.bs.carousel', (event) => {
+        clearInterval(intervalId) // 停止當前進度
+        const nextSlide = event.relatedTarget
+        console.log('wefew ', nextSlide.getAttribute('data-bs-interval')) // 根本沒東西...
+        intervalDuration = nextSlide.getAttribute('data-bs-interval') || 8000
+
+        // 開始新的進度條動畫
+        startProgressBar(intervalDuration)
+      })
+
+      // 啟動初始進度條
+      startProgressBar(intervalDuration)
+
+      // 熱門商品
+      const swiper1 = new Swiper('.swiper-popular1', {
+        grabCursor: true,
+        slidesPerView: 3,
+        loop: true,
+        centeredSlides: true,
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next1',
+          prevEl: '.swiper-button-prev1',
+        },
+      })
+
+      // 光頡優勢
+      const swiper2 = new Swiper('.swiper-popular2', {
+        grabCursor: true,
+        slidesPerView: 1,
+        loop: true,
+        centeredSlides: true,
+        pagination: {
+          el: '.swiper-pagination2',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next2',
+          prevEl: '.swiper-button-prev2',
+        },
+      })
+
+      // 光頡優勢
+      const swiper3 = new Swiper('.swiper-popular3', {
+        grabCursor: true,
+        slidesPerView: 1,
+        loop: true, // 不循環
+        centeredSlides: true,
+        pagination: {
+          el: '.swiper-pagination3',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next3',
+          prevEl: '.swiper-button-prev3',
+        },
+      })
+
+      const swiper = new Swiper('.swiper-popular0', {
+        effect: 'fade', // 設置為淡入淡出效果
+        fadeEffect: { crossFade: true },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+      })
+    </script>
+  </body>
+</html>
